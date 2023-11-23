@@ -132,8 +132,9 @@ const PaymentCategories = () => {
                             </Button>
                         }
                         header={"Add a new payment category"}
-                        children={<NewCategory />}
-                    />
+                    >
+                        <NewCategory />
+                    </Modal>
                 </div>
 
                 {/* Search */}
@@ -227,8 +228,9 @@ const PaymentCategories = () => {
                                                         </button>
                                                     }
                                                     header={"Edit payment category"}
-                                                    children={<NewCategory id={item.id} />}
-                                                />
+                                                >
+                                                    <NewCategory id={item.id} />
+                                                </Modal>
 
                                                 <button
                                                     onClick={(e) => handleConfirmation(item.id)}
