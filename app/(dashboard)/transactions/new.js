@@ -262,7 +262,7 @@ const NewCategory = ({ id }) => {
                                             </FormControl>
                                             <SelectContent>
                                                 {currencies?.map((currency) => (
-                                                    <SelectItem value={currency.id.toString()}>{currency.attributes.name}</SelectItem>
+                                                    <SelectItem key={currency.id} value={currency.id.toString()}>{currency.attributes.name}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -285,7 +285,7 @@ const NewCategory = ({ id }) => {
                                             </FormControl>
                                             <SelectContent>
                                                 {categories?.map((category) => (
-                                                    <SelectItem value={category.id.toString()}>{category.attributes.name}</SelectItem>
+                                                    <SelectItem key={category.id} value={category.id.toString()}>{category.attributes.name}</SelectItem>
                                                 ))}
                                             </SelectContent>
                                         </Select>
@@ -309,7 +309,7 @@ const NewCategory = ({ id }) => {
                                         </FormControl>
                                         <SelectContent>
                                             {paymentMethods?.map((paymentMethod) => (
-                                                <SelectItem value={paymentMethod.id.toString()}>{paymentMethod.attributes.name}</SelectItem>
+                                                <SelectItem key={paymentMethod.id} value={paymentMethod.id.toString()}>{paymentMethod.attributes.name}</SelectItem>
                                             ))}
                                         </SelectContent>
                                     </Select>

@@ -287,7 +287,7 @@ function Dashboard() {
                                 </SelectTrigger>
                                 <SelectContent>
                                     {currencies?.map((currency) => (
-                                        <SelectItem value={currency.id.toString()}>{currency.attributes.name}</SelectItem>
+                                        <SelectItem key={currency.id} value={currency.id.toString()}>{currency.attributes.name}</SelectItem>
                                     ))}
                                 </SelectContent>
                             </Select>
