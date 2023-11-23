@@ -132,8 +132,9 @@ const PaymentMethods = () => {
                             </Button>
                         }
                         header={"Add a new payment method"}
-                        children={<NewPaymentMethod />}
-                    />
+                    >
+                        <NewPaymentMethod />
+                    </Modal>
                 </div>
 
                 {/* Search */}
@@ -217,8 +218,10 @@ const PaymentMethods = () => {
                                                         </button>
                                                     }
                                                     header={"Edit payment method"}
-                                                    children={<NewPaymentMethod id={item.id} />}
-                                                />
+
+                                                >
+                                                    <NewPaymentMethod id={item.id} />
+                                                </Modal>
 
                                                 <button
                                                     onClick={(e) => handleConfirmation(item.id)}

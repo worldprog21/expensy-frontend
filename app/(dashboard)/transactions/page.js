@@ -133,11 +133,11 @@ const Transactions = () => {
                             </Button>
                         }
                         header={"Add a new transaction"}
-                        children={
-                            <div className="overflow-y-auto h-[calc(100vh-150px)] p-5">
-                                <NewTransaction />
-                            </div>}
-                    />
+                    >
+                        <div className="overflow-y-auto h-[calc(100vh-150px)] p-5">
+                            <NewTransaction />
+                        </div>
+                    </Modal>
                 </div>
 
                 {/* Search */}
@@ -266,12 +266,11 @@ const Transactions = () => {
                                                         </button>
                                                     }
                                                     header={"Edit transaction"}
-                                                    children={
-                                                        <div className="overflow-y-auto h-[calc(100vh-150px)] p-5">
-                                                            <NewTransaction id={item.id} />
-                                                        </div>
-                                                    }
-                                                />
+                                                >
+                                                    <div className="overflow-y-auto h-[calc(100vh-150px)] p-5">
+                                                        <NewTransaction id={item.id} />
+                                                    </div>
+                                                </Modal>
 
                                                 <button
                                                     onClick={(e) => handleConfirmation(item.id)}

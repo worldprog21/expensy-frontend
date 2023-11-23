@@ -132,8 +132,9 @@ const Currencies = () => {
                             </Button>
                         }
                         header={"Add a new currency"}
-                        children={<NewCurrency />}
-                    />
+                    >
+                        <NewCurrency />
+                    </Modal>
                 </div>
 
                 {/* Search */}
@@ -227,8 +228,9 @@ const Currencies = () => {
                                                         </button>
                                                     }
                                                     header={"Edit currency"}
-                                                    children={<NewCurrency id={item.id} />}
-                                                />
+                                                >
+                                                    <NewCurrency id={item.id} />
+                                                </Modal>
 
                                                 <button
                                                     onClick={(e) => handleConfirmation(item.id)}
